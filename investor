@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>THE CLUB – Investor Opportunities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050710;
+      color: #f5f5f5;
+      margin: 0;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(5,7,16,0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo { font-weight: 700; letter-spacing: .18em; font-size: 0.9rem; }
+    .back-link { font-size: 0.82rem; opacity: 0.85; }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 18px 50px;
+    }
+    h1 {
+      font-size: clamp(2rem, 3vw, 2.4rem);
+      margin-bottom: 6px;
+    }
+    .tagline {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      max-width: 40rem;
+      margin-bottom: 22px;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 26px;
+    }
+    .pill {
+      font-size: 0.76rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.2);
+      opacity: 0.9;
+    }
+    h2 {
+      font-size: 1.1rem;
+      margin: 26px 0 10px;
+    }
+    p { font-size: 0.9rem; opacity: 0.92; }
+    ul { padding-left: 18px; font-size: 0.9rem; opacity: 0.92; }
+    li { margin-bottom: 6px; }
+    .card {
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: radial-gradient(circle at top,#171a2a,#050710 60%);
+      padding: 18px;
+      margin-top: 14px;
+    }
+    .highlight {
+      color: #ff9c5a;
+      font-weight: 600;
+    }
+    .contact-box {
+      margin-top: 24px;
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px dashed rgba(255,255,255,0.4);
+      background: rgba(0,0,0,0.4);
+      font-size: 0.9rem;
+    }
+    .contact-box a { text-decoration: underline; }
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      opacity: 0.7;
+      padding: 18px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">THE CLUB</div>
+  <a href="index.html" class="back-link">← Back to main site</a>
+</header>
+
+<main>
+  <h1>Investor Opportunities</h1>
+  <p class="tagline">
+    THE CLUB is a proposed recovery and performance hub in Pakenham combining
+    sauna, steam, ice bath, infrared and strength training in one premium space.
+    We are seeking aligned investors or partners to help bring this concept to life.
+  </p>
+
+  <div class="pill-row">
+    <div class="pill">Located in Pakenham, VIC</div>
+    <div class="pill">Recovery & Wellness Sector</div>
+    <div class="pill">Membership-based model</div>
+    <div class="pill">Locally owned & operated</div>
+  </div>
+
+  <h2>The concept</h2>
+  <p>
+    THE CLUB is designed as a practical, high-impact facility for real people:
+    tradies, shift workers, athletes and locals who want better recovery, less
+    stress and improved performance. The space combines:
+  </p>
+  <ul>
+    <li>Infrared and traditional sauna options</li>
+    <li>Steam room and heat therapy zones</li>
+    <li>Dedicated ice bath and contrast therapy area</li>
+    <li>Strength and conditioning zone</li>
+    <li>Spaces for breath work, mindset and downtime</li>
+  </ul>
+
+  <h2>Why Pakenham?</h2>
+  <p>
+    Pakenham and the surrounding Cardinia growth corridor are experiencing rapid
+    population growth, an increase in younger families and a strong base of
+    tradies and workers who value fitness and lifestyle – but have limited
+    access to dedicated recovery spaces.
+  </p>
+  <p>
+    THE CLUB aims to become the go-to destination for recovery, performance and
+    mental reset in the region.
+  </p>
+
+  <h2>Business model (high level)</h2>
+  <div class="card">
+    <ul>
+      <li><span class="highlight">Memberships:</span> tiered weekly/fortnightly memberships with different access levels.</li>
+      <li><span class="highlight">Casual passes:</span> drop-in and multi-visit passes for non-members.</li>
+      <li><span class="highlight">Small group sessions:</span> guided contrast therapy, breath work and recovery classes.</li>
+      <li><span class="highlight">Add-ons:</span> potential for massage, bodywork and performance coaching partners.</li>
+    </ul>
+  </div>
+
+  <h2>What we’re looking for</h2>
+  <p>
+    We are currently in the planning and site-search phase and are open to
+    discussing:
+  </p>
+  <ul>
+    <li>Silent partner arrangements</li>
+    <li>Equity investment to assist with fit-out and equipment</li>
+    <li>Debt funding backed by the business</li>
+    <li>Strategic partners in fitness, wellness or allied health</li>
+  </ul>
+
+  <h2>The founder</h2>
+  <p>
+    THE CLUB is being developed by local founder <span class="highlight">Dennis Vidot</span>,
+    with a background in trades and construction and a strong interest in
+    performance, recovery and community-focused ventures. The vision is to build
+    something that genuinely serves locals, feels premium, but still stays
+    practical for everyday people.
+  </p>
+
+  <h2>Let’s talk</h2>
+  <div class="contact-box">
+    If you’re interested in seeing a more detailed concept overview, financial
+    projections or discussing potential partnership structures, please get in touch:
+    <br/><br/>
+    📩 Email: <a href="mailto:theclubrecover@gmail.com?subject=Investor%20Enquiry%20-%20THE%20CLUB">
+      theclubrecover@gmail.com
+    </a><br/>
+    📱 Or connect via social media: @theclubpakenham
+    <br/><br/>
+    We’re happy to meet locally around Pakenham/Cardinia or via video call.
+  </div>
+</main>
+
+<footer>
+  © THE CLUB Pakenham – Investor Information Page
+</footer>
+
+</body>
+</html>
