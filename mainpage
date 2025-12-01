@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>THE CLUB – Recovery & Performance | Pakenham</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050710;
+      color: #f5f5f5;
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(5,7,16,0.9);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+    }
+    .logo {
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      font-size: 0.9rem;
+    }
+    .badge {
+      font-size: 0.7rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.15);
+      text-transform: uppercase;
+      letter-spacing: .13em;
+    }
+    .nav-links a {
+      margin-left: 20px;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+    .nav-links a:hover { opacity: 1; }
+
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 18px 40px;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.6fr);
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-tag {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #8af3ff;
+      margin-bottom: 14px;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 4vw, 3.1rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+    .hero h1 span {
+      color: #49c9ff;
+    }
+    .hero p {
+      font-size: 0.98rem;
+      max-width: 32rem;
+      opacity: 0.85;
+      margin-bottom: 18px;
+    }
+    .hero-bullets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+    .chip {
+      font-size: 0.75rem;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.18);
+      opacity: 0.9;
+    }
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .btn-primary {
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg,#ff4b6b,#ff914d);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .btn-ghost {
+      padding: 9px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.25);
+      font-size: 0.85rem;
+    }
+    .hero-note {
+      font-size: 0.8rem;
+      opacity: 0.75;
+    }
+
+    .hero-media {
+      position: relative;
+      min-height: 260px;
+      border-radius: 26px;
+      overflow: hidden;
+      background: radial-gradient(circle at top left,#ff5722 0,#050710 48%), 
+                  radial-gradient(circle at bottom right,#00c2ff 0,#050710 55%);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .hero-media-inner {
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(1,4,12,0.8);
+      padding: 18px;
+    }
+    .hero-media-title {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+    .hero-media-text {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    .hero-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+      font-size: 0.72rem;
+    }
+    .hero-pill {
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 18px 40px;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 20px;
+    }
+    .card {
+      background: radial-gradient(circle at top,#161928,#050710 55%);
+      border-radius: 20px;
+      padding: 18px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .card h3 {
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 0.86rem;
+      opacity: 0.85;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0,1.3fr) minmax(0,1fr);
+      gap: 26px;
+      align-items: start;
+    }
+    ul {
+      padding-left: 18px;
+      font-size: 0.86rem;
+      opacity: 0.9;
+    }
+    li { margin-bottom: 6px; }
+
+    .waitlist-box {
+      margin-top: 10px;
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px dashed rgba(255,255,255,0.28);
+      background: rgba(0,0,0,0.35);
+      font-size: 0.85rem;
+    }
+    .waitlist-box strong { color: #ff9c5a; }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 18px;
+      text-align: center;
+      font-size: 0.78rem;
+      opacity: 0.7;
+      margin-top: 10px;
+    }
+    footer a { text-decoration: underline; }
+
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; padding-top: 32px; }
+      .hero-media { order: -1; }
+      .grid-3 { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div>
+      <div class="logo">THE CLUB</div>
+      <div class="badge">Pakenham · Coming Soon</div>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#recovery">Recovery</a>
+      <a href="#join">Join Waitlist</a>
+      <a href="investors.html">Investor Opportunities</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <div class="hero-tag">Recovery • Performance • Community</div>
+      <h1>Pakenham’s home of <span>heat, ice & strength</span>.</h1>
+      <p>
+        THE CLUB is a new recovery and performance space bringing sauna, steam,
+        ice bath, infrared and strength together under one roof for locals,
+        tradies and athletes who want to feel unstoppable.
+      </p>
+      <div class="hero-bullets">
+        <div class="chip">Infrared Sauna</div>
+        <div class="chip">Steam Room</div>
+        <div class="chip">Ice Baths</div>
+        <div class="chip">Strength Zone</div>
+        <div class="chip">Breath & Recovery</div>
+      </div>
+      <div class="hero-cta" id="join">
+        <button class="btn-primary">Join the Waitlist</button>
+        <a class="btn-ghost" href="mailto:info@theclubpakenham.com?subject=Waitlist%20enquiry">
+          Or email: info@theclubpakenham.com
+        </a>
+      </div>
+      <div class="hero-note">
+        <strong>Limited foundation memberships</strong> planned for launch.  
+        Drop your details to be first in line.
+      </div>
+    </div>
+
+    <div class="hero-media">
+      <div class="hero-media-inner">
+        <div class="hero-media-title">Teaser</div>
+        <div class="hero-media-text">
+          “Would you go here, Pakenham?”  
+          Imagine walking into a space built purely for your recovery, performance
+          and headspace after a big day on the tools or in the gym.
+        </div>
+        <div class="hero-pill-row">
+          <div class="hero-pill">Hot • Cold • Contrast</div>
+          <div class="hero-pill">Tradie & Athlete Friendly</div>
+          <div class="hero-pill">Locally Owned</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">What is THE CLUB?</h2>
+    <div class="grid-3">
+      <div class="card">
+        <h3>Recovery, done properly</h3>
+        <p>
+          The Club is a purpose-built recovery hub where you can combine sauna,
+          steam, ice bath and infrared sessions to reset your body and mind.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Built for real people</h3>
+        <p>
+          From tradies and shift workers to weekend warriors and local athletes –
+          this is a place to switch off, recover and level up.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Community first</h3>
+        <p>
+          Locally owned and run. We’re creating a space where people respect the
+          room, support each other and walk out better than they walked in.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="recovery">
+    <h2 class="section-title">Heat. Ice. Strength.</h2>
+    <div class="two-col">
+      <div>
+        <h3>What you’ll find inside</h3>
+        <ul>
+          <li>Infrared and traditional sauna options for deep heat sessions.</li>
+          <li>Steam room for breathing work, sweat sessions and relaxation.</li>
+          <li>Dedicated ice bath zone for contrast therapy and cold plunges.</li>
+          <li>Strength and conditioning zone for simple, effective training.</li>
+          <li>Spaces for breath work, focus and downtime between sets.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Who THE CLUB is for</h3>
+        <ul>
+          <li>Tradies and workers who are sore, tight and burnt out.</li>
+          <li>Athletes who want a recovery edge on game day.</li>
+          <li>Parents who need one hour where it’s all about them.</li>
+          <li>Anyone chasing better sleep, less stress and more energy.</li>
+        </ul>
+        <div class="waitlist-box">
+          <strong>Early access:</strong>  
+          We’re currently in the planning and investor phase.  
+          Join the waitlist or follow us on socials to track the build and be
+          first to know when foundation memberships drop.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Stay in the loop</h2>
+    <p style="font-size:0.9rem; max-width:40rem; opacity:0.9;">
+      We’ll be sharing updates on location, designs, opening timelines and
+      membership options across Facebook and Instagram.  
+      Search <strong>@theclubpakenham</strong> or get in touch directly:
+    </p>
+    <div class="waitlist-box" style="margin-top:16px;">
+      📩 <strong>Email:</strong> theclubrecover@gmail.com<br/>
+      📱 <strong>DM:</strong> Instagram / Facebook @theclubrecovery
+    </div>
+  </section>
+</main>
+
+<footer>
+  © THE CLUB Recovery. All rights reserved.  
+  <a href="investors.html">Investor opportunities</a>
+</footer>
+
+</body>
+</html>
